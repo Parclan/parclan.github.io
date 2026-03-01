@@ -1,1206 +1,515 @@
 <!DOCTYPE html>
-<html class='no-js' >
-	
+<html lang="es">
 	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	
-		
-		<title>Jose Molina</title>
-		
-		<!--[if lt IE 9]>
-		  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-		
-		<link rel='stylesheet' type='text/css' href='bootstrap/css/bootstrap.min.css' >
-		<link rel='stylesheet' type='text/css' href='css/ionicons.min.css' >
-		<link rel="shortcut icon" href="img/favicon.jpg" type="image/x-icon">
-		<link rel='stylesheet' type='text/css' href='css/owl.carousel.css' >
-		<link rel='stylesheet' type='text/css' href='css/owl.theme.css' >
-		<link rel='stylesheet' type='text/css' href='css/owl.transitions.css' >
-		<link rel='stylesheet' type='text/css' href='css/magnific-popup.css' >
-		<link rel='stylesheet' type='text/css' href='css/style.css' >
-		<link rel='stylesheet' type='text/css' href='css/color-default.css' >
-		
-		
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>Parclan — Developer</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="https://unpkg.com/@phosphor-icons/web"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
+		<link rel="stylesheet" href="css/index.css"/>
+		<script src="js/index.js" defer></script>
 	</head>
-	
+
 	<body>
-		
-		<!--=============================================================================
-			Preloader
-		===============================================================================-->
-		<div id='preloader' >
-			<div class='loader' >
-				<img src='img/load.gif' alt='symp' >
+
+		<div class="cursor-glow" id="glow"></div>
+
+		<!-- NAV -->
+		<nav>
+			<div class="nav-inner">
+				<div class="nav-logo"><span>~/</span>Parclan</div>
+				<div class="nav-links">
+				<a href="#stack">Stack</a>
+				<a href="#projects">Proyectos</a>
+				<a href="#experience">Experiencia</a>
+				<a href="#about">Sobre mí</a>
+				</div>
+				<a href="#contact" class="nav-cta">Contacto</a>
 			</div>
-		</div>
-		
-		
-		
-		<!--=============================================================================
-			Main Wrapper
-		===============================================================================-->
-		<div id='wrapper' >
-			
-			<!--=============================================================================
-				Front Section
-			===============================================================================-->
-			<section class='front-section' >
-				
-				<div class='container' >
-					
-					
-					<div class='transition-mask' ></div>
-					
-					
-					<div class='front-person-img' >
-						
-						<!--person's image-->
-						<img src='img/men2.jpg' alt='Symp' >
-						<!--/person's image-->
-						
-					</div>
-					
-					<!--person's titles-->
-					<div class='front-person-titles' >
-						
-						<!--title1-->
-						<span class='t1' >
-							Welcome
-						</span>
-						<!--/title1-->
-						
-						<!--title2-->
-						<span class='t2' >
-							To my
-						</span>
-						<!--/title2-->
-						
-						<!--title3-->
-						<span class='t3' >
-							Portafolio
-						</span>
-						<!--/title3-->
-						
-					</div>
-					<!--/person's titles-->
-					
-					<nav class='front-person-links' >
-						
-						<!--
-							navigation links, data-section attribute points towards the section with id to be opened. 
-						-->
-						
-						<ul>
-							
-							<li>
-								<a href='#' data-section='about' >Sobre mi</a>
-							</li>
-							
-							<li>
-								<a href='#' data-section='resume' >Resume</a>
-							</li>
-							
-							<li>
-								<a href='#' data-section='portfolio' >Portfolio</a>
-							</li>
-							
-							<!--<li>
-								<a href='#' data-section='contact' >Contact</a>
-							</li>-->
-							
-						</ul>
-						
-					</nav>
-						
-					
-						
-					</div>
-					
-					
+		</nav>
+
+		<!-- HERO -->
+		<section class="hero">
+			<div class="hero-inner">
+				<div>
+				<div class="hero-pre"><i class="ph-duotone ph-terminal-window"></i> Hello World!<span class="blink">█</span></div>
+				<h1>
+					Hola, soy <span class="name">Jose Molina</span>
+					<span class="role">Software Developer</span>
+				</h1>
+				<p class="hero-desc">Construyo aplicaciones web robustas y escalables. Apasionado por el código limpio, la arquitectura bien pensada y las soluciones que realmente resuelven problemas.</p>
+				<div class="hero-btns">
+					<a href="#projects" class="btn-primary"><i class="ph-duotone ph-folder-open"></i> Ver proyectos</a>
+					<a href="#contact" class="btn-ghost"><i class="ph-duotone ph-paper-plane-tilt"></i> Hablemos</a>
 				</div>
-				
-			</section>
-			<!--=============================================================================
-				/Front Section
-			===============================================================================-->
-		
-			<!--=============================================================================
-				About Section
-			===============================================================================-->
-			<section id='about' class='about-section section' >
-				
-				<div class='basic-info section-block' >
-					
-					<div class='container' >
-					
-						<div class='section-header text-center' >
-							
-							<h2>Mi información</h2>
-							
-							<!--divider-->
-							<div class='divider-draft center' ></div>
-							<!--/divider-->
-							
-							
-						</div>
-						
-						<div class='row' >
-							
-							<div class='col-md-4' >
-								<div class='about-person-img' >
-									
-									<img src='img/men.jpg' alt='symp'>
-									
-								</div>
-							
-							</div>
-							
-							
-							<div class='col-md-8 about-info' >
-								
-								
-								<p>
-
-									¡Hola! Soy Jose Daniel Molina Jimenez, un apasionado por la programación y el desarrollo web. 
-									Aunque mi experiencia en este campo es limitada, estoy emocionado por aprender y crecer en esta 
-									industria en constante evolución.
-									Desde que descubrí mi interés por la programación, he estado dedicando tiempo a aprender los 
-									fundamentos esenciales. He trabajado en proyectos personales para aplicar lo que he aprendido 
-									y mejorar mis habilidades. Algunos de mis proyectos incluyen tiendas web, sitios web empreserial
-									y paginas de facturacion.
-									Siempre estoy buscando oportunidades para aprender y crecer. He participado activamente en 
-									comunidades en línea y he buscado la retroalimentación de otros desarrolladores más experimentados 
-									para mejorar mis habilidades. Además, he completado cursos en línea, como base de datos, logica de programacion, python y angular.
-
-								</p>
-								
-								<div class='clearfix' ></div>
-								
-								
-								<ul class='info-list' >
-									
-									<li>
-										<div class='inner' >
-											<h4>Nombre</h4>
-											<p>José Molina</p>
-										</div>
-									</li>
-									<li>
-										<div class='inner' >
-											<h4>Edad</h4>
-											<p>20</p>
-										</div>
-									</li>
-									<li>
-										<div class='inner' >
-											<h4>Website</h4>
-											<p><a href="https://github.com/Parclan">Github</a></p>
-										</div>
-									</li>
-									
-									
-									
-								</ul>
-								
-							</div>
-						
-							
-						
-						</div>
-						
-						
-						
-						
-					</div>
-					
-					
 				</div>
-				
-				<div class='about-icons section-block' >
-					
-					<div class='container' >
-						
-						<div class='row' >
-							
-							<div class='col-md-3' >
-								<div class='service' >
-									
-									<div class='icon' >
-										<i class='ion-ios-lightbulb' ></i>
-									</div>
-									
-									<div class='content' >
-										
-										<h4>Creatividad</h4>
-										
-									</div>
-									
-								</div>
-							</div>
-							
-							<div class='col-md-3' >
-								<div class='service' >
-									
-									<div class='icon' >
-										<i class='ion-trophy' ></i>
-									</div>
-									
-									<div class='content' >
-										
-										<h4>Ganador</h4>
-										
-									</div>
-									
-								</div>
-							</div>
-							
-							<div class='col-md-3' >
-								<div class='service' >
-									
-									<div class='icon' >
-										<i class='ion-ios-glasses' ></i>
-									</div>
-									
-									<div class='content' >
-										
-										<h4>Elegante</h4>
-										
-									</div>
-									
-								</div>
-							</div>
-							
-							<div class='col-md-3' >
-								<div class='service' >
-									
-									<div class='icon' >
-										<i class='ion-ios-bolt' ></i>
-									</div>
-									
-									<div class='content' >
-										
-										<h4>Poder total</h4>
-										
-									</div>
-									
-								</div>
-							</div>
-							
-							
-							
-							<div class='col-md-3' >
-								<div class='service' >
-									
-									<div class='icon' >
-										<i class='ion-help-buoy' ></i>
-									</div>
-									
-									<div class='content' >
-										
-										<h4>Ayudante</h4>
-
-									</div>
-									
-								</div>
-							</div>
-							
-							<div class='col-md-3' >
-								<div class='service' >
-									
-									<div class='icon' >
-										<i class='ion-happy' ></i>
-									</div>
-									
-									<div class='content' >
-										
-										<h4>Inteligente</h4>
-								
-									</div>
-									
-								</div>
-							</div>
-							
-							
-							<div class='col-md-3' >
-								<div class='service' >
-									
-									<div class='icon' >
-										<i class='ion-ios-pulse-strong' ></i>
-									</div>
-									
-									<div class='content' >
-										
-										<h4>Saludable</h4>
-										
-									</div>
-									
-								</div>
-							</div>
-							
-						</div>
-			
-					</div>
-				</div>		
-				
-				<div class='footer bg-lightgray section-block' >
-					
-					<div class='container' >
-						
-						<div class='row' >
-							
-							<div class='col-xs-6 text-left' >
-								<h4>Jose Molina</h4>
-							</div>
-							
-							<div class='col-xs-6 text-right' >
-								<ul class='footer-social' >
-									<li>
-										<a href='https://web.facebook.com/josedaniel.molinajimenez.7' target="_blank">
-											<i class='ion-social-facebook' ></i>
-										</a>
-									</li>
-									<li>
-										<a href='https://wa.me/+573213485867' target="_blank">
-											<i class='ion-social-whatsapp' ></i>
-										</a>
-									</li>
-									<li>
-										<a href='https://www.instagram.com/iamjose_priv/' target="_blank">
-											<i class='ion-social-instagram' ></i>
-										</a>
-									</li>
-									<li>
-										<a href='https://github.com/Parclan' target="_blank">
-											<i class='ion-social-github' ></i>
-										</a>
-									</li>
-								</ul>
-							</div>
-							
-						</div>
-						
-						
-					</div>
-					
+				<div class="terminal fade-up">
+				<div class="terminal-bar">
+					<div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div>
+					<div class="terminal-title">developer.json</div>
 				</div>
-				
-				
-			</section>
-			<!--=============================================================================
-				/About Section
-			===============================================================================-->
-			
-			<!--=============================================================================
-				Resume Section
-			===============================================================================-->
-			<section id='resume' class='resume-section section' >
-				
-				<div class='container' >
-					<div class='row' >
-						<div class='col-md-6 col-md-offset-3' >
-							<div class='section-header text-center' >
-								
-								<h2 class='animate text-over-block' >Mi resumen</h2>
-								
-								<!--divider-->
-								<div class='divider-draft center' ></div>
-								<!--/divider-->
-								
-								
-							</div>
-						</div>
-					</div>
+				<div class="terminal-body">
+					<span class="t-line"><span class="t-comment">// Mi stack técnico</span></span>
+					<span class="t-line"><span class="t-cmd">{</span></span>
+					<span class="t-line">&nbsp;&nbsp;<span class="t-key">"name"</span><span class="t-cmd">: </span><span class="t-str">"Jose Molina"</span><span class="t-cmd">,</span></span>
+					<span class="t-line">&nbsp;&nbsp;<span class="t-key">"role"</span><span class="t-cmd">: </span><span class="t-str">"Full Stack Developer"</span><span class="t-cmd">,</span></span>
+					<span class="t-line">&nbsp;&nbsp;<span class="t-key">"languages"</span><span class="t-cmd">: [</span></span>
+					<span class="t-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-str">"Python"</span><span class="t-cmd">, </span><span class="t-str">"PHP"</span><span class="t-cmd">,</span></span>
+					<span class="t-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-str">"JavaScript"</span><span class="t-cmd">, </span><span class="t-str">"TypeScript"</span></span>
+					<span class="t-line">&nbsp;&nbsp;<span class="t-cmd">],</span></span>
+					<span class="t-line">&nbsp;&nbsp;<span class="t-key">"frameworks"</span><span class="t-cmd">: [</span></span>
+					<span class="t-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-str">"React"</span><span class="t-cmd">, </span><span class="t-str">"Laravel"</span><span class="t-cmd">,</span></span>
+					<span class="t-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-str">"FastAPI"</span><span class="t-cmd">, </span><span class="t-str">"CodeIgniter"</span></span>
+					<span class="t-line">&nbsp;&nbsp;<span class="t-cmd">],</span></span>
+					<span class="t-line">&nbsp;&nbsp;<span class="t-key">"database"</span><span class="t-cmd">: </span><span class="t-str">"SQL"</span><span class="t-cmd">,</span></span>
+					<span class="t-line">&nbsp;&nbsp;<span class="t-key">"available"</span><span class="t-cmd">: </span><span class="t-bool">true</span></span>
+					<span class="t-line"><span class="t-cmd">}</span></span>
 				</div>
-				
-				<div class='timeline-block section-block' >
-					<div class='container' >
-						<ul class='timeline' >
-							
-							<li class='timeline-header' >
-								<h4>Educación</h4>
-							</li>
-
-							<li class="inverse">
-								
-								<div class='timeline-desc' >
-									
-									<h4>2017-2018</h4>
-									
-								</div>
-								
-								<div class='timeline-content' >
-									
-									<h4>CURSO ESPECIAL EN APLICACIÓN DE LOS SENSORES EN LA TECNOLOGÍA DE MEDICIÓN Y CONTROL DE PROCESOS .</h4>
-									<span>@SENA</span>
-									
-									<!--<p>
-										Consul latine iudicabit eu vel. Cu has animal eruditi voluptatibus. Eu volumus explicari sed. Mel mutat vituperata suscipiantur et, et fabellas explicari adipiscing quo.
-									</p>-->
-									
-								</div>
-								
-							</li>
-							
-							<li>
-								
-								<div class='timeline-desc' >
-									
-									<h4>2019-2021</h4>
-									
-								</div>
-								
-								<div class='timeline-content' >
-									
-									<h4>TÉCNICO EN PROGRAMACION DE SOFTWARE</h4>
-									<span>@SENA</span>
-
-									<!--<p>
-										Consul latine iudicabit eu vel. Cu has animal eruditi voluptatibus. Eu volumus explicari sed. Mel mutat vituperata suscipiantur et, et fabellas explicari adipiscing quo.
-									</p>-->
-									
-								
-								</div>
-								
-							</li>
-							
-							<li class='inverse' >
-								
-								<div class='timeline-desc' >
-									
-									<h4>2019-2020</h4>
-									
-								</div>
-								
-								<div class='timeline-content' >
-									
-									<h4>BACHILLERATO</h4>
-									<span>@FRANCISCO DE PAULA SANTANDER DE GALAPA</span>
-									
-									<!--<p>
-										Consul latine iudicabit eu vel. Cu has animal eruditi voluptatibus. Eu volumus explicari sed. Mel mutat vituperata suscipiantur et, et fabellas explicari adipiscing quo.
-									</p>-->
-									
-									
-								</div>
-								
-							</li>							
-							
-							<li>
-								
-								<div class='timeline-desc' >
-									
-									<h4>2021-2022</h4>
-									
-								</div>
-								
-								<div class='timeline-content' >
-									
-									<h4>CURSO ESPECIAL EN EMPRENDIMIENTO DIGITAL</h4>
-									<span>@SENA</span>
-									
-									<!--<p>
-										
-									</p>-->
-									
-								</div>
-								
-							</li>
-							
-							<li class='inverse' >
-								
-								<div class='timeline-desc' >
-									
-									<h4>2021-2022</h4>
-									
-								</div>
-								
-								<div class='timeline-content' >
-									
-									<h4>CURSO ESPECIAL EN DISEÑO Y DESARROLLO DE FRONT-END CON HTML 5 CSS- JAVASCRIPT</h4>
-									<span>@SENA</span>
-									
-									<!--<p>
-										
-									</p>-->
-									
-								</div>
-
-								
-								
-							</li>
-							
-							<li>
-								
-								<div class='timeline-desc' >
-									
-									<h4>2021-2022</h4>
-									
-								</div>
-								
-								<div class='timeline-content' >
-									
-									<h4>CURSO ESPECIAL EN HABILIDADES PARA CREAR REDES Y ALIANZAS DE VALOR EN EL ENTORNO LABORAL</h4>
-									<span>@SENA</span>
-									
-									<!--<p>
-										
-									</p>-->
-									
-								</div>
-								
-							</li>
-
-							<li class='timeline-header' >
-								<h4>Experiencia</h4>
-							</li>
-							
-							<li class='inverse' >
-								
-								<div class='timeline-desc' >
-									
-									<h4>2021-2023</h4>
-									
-								</div>
-								
-								<div class='timeline-content' >
-									
-									<h4>DESARROLLADOR WEB PAGINAS DE VENTAS, FACTURACIÓN Y EMPRESARIAL</h4>
-									
-									<!--<p>
-										
-									</p>-->
-									
-								</div>
-
-							</li>
-
-							<li>
-								
-								<div class='timeline-desc' >
-									
-									<h4>2023-2024</h4>
-									
-								</div>
-								
-								<div class='timeline-content' >
-									
-									<h4>TECNIJURIDICA SAS</h4>
-									
-									<!--<p>
-										
-									</p>-->
-									
-								</div>
-								
-							</li>
-
-						</ul>
-					</div>
 				</div>
-				
-				<div class='hobbies-block bg-lightgray section-block' >
-					<div class='container' >
-						
-						<div class='section-header text-center' >
-							<h2 class='animate text-over-block' >Mis Hobbies</h2>
-							<!--divider-->
-							<div class='divider-draft center' ></div>
-							<!--/divider-->
-						</div>
-						
-						<div class='row' >
-							
-							<div class='col-md-2 col-sm-4 col-xs-6' >
-								
-								<div class='hobby' >
-									
-									<div class='icon' >
-										<i class='ion-ios-game-controller-b' ></i>
-									</div>
-									
-									<h4>Video Juegos</h4>
-									
-								</div>
-								
-							</div>
-							
-							<div class='col-md-2 col-sm-4 col-xs-6' >
-								
-								<div class='hobby' >
-									
-									<div class='icon' >
-										<i class='ion-ios-book' ></i>
-									</div>
-									
-									<h4>Estudiar</h4>
-									
-								</div>
-								
-							</div>
-							
-							
-							<div class='col-md-2 col-sm-4 col-xs-6' >
-								
-								<div class='hobby' >
-									
-									<div class='icon' >
-										<i class='ion-ios-musical-notes' ></i>
-									</div>
-									
-									<h4>Musica</h4>
-									
-								</div>
-								
-							</div>
-							
-							
-							<div class='col-md-2 col-sm-4 col-xs-6' >
-								
-								<div class='hobby' >
-									
-									<div class='icon' >
-										<i class='ion-ios-football' ></i>
-									</div>
-									
-									<h4>Futbol</h4>
-									
-								</div>
-								
-							</div>
-							
-							
-							
-						</div>
-						
-						
-						
-					</div>
-				</div>
-				
-				<div class='skills-block section-block' >
-					
-					<div class='container' >
-					
-						<div class='section-header text-center' >
-							<h2 class='animate text-over-block' >Mis Habilidades</h2>
-							
-							<!--divider-->
-							<div class='divider-draft center' ></div>
-							<!--/divider-->
-							
-						</div>
-						
-						
-						<div class='row' >
-							
-							<div class='col-md-6' >
-								
-								<div class='skill' >
-									
-									<h4>HTML/CSS/JS</h4>
-									
-									<div class='skill-bar' data-percent='90' >
-										<div class='bar' >
-											<div class='percent' >90%</div>
-										</div>
-									</div>
-									
-								</div>
-								
-								<div class='skill' >
-									
-									<h4>php</h4>
-									
-									<div class='skill-bar' data-percent='50' >
-										<div class='bar' >
-											<div class='percent' >50%</div>
-										</div>
-									</div>
-									
-								</div>
-								
-								<div class='skill' >
-									
-									<h4>Angular</h4>
-									
-									<div class='skill-bar' data-percent='30' >
-										<div class='bar' >
-											<div class='percent' >30%</div>
-										</div>
-									</div>
-									
-								</div>
-								
-								
-								
-							</div>
-							
-							<div class='col-md-6' >
-								
-								<div class='skill' >
-									
-									<h4>Python</h4>
-									
-									<div class='skill-bar' data-percent='35' >
-										<div class='bar' >
-											<div class='percent' >35%</div>
-										</div>
-									</div>
-									
-								</div>
-								
-								<div class='skill' >
-									
-									<h4>Java</h4>
-									
-									<div class='skill-bar' data-percent='25' >
-										<div class='bar' >
-											<div class='percent' >25%</div>
-										</div>
-									</div>
-									
-								</div>
-								
-								<div class='skill' >
-									
-									<h4>Sql</h4>
-									
-									<div class='skill-bar' data-percent='90' >
-										<div class='bar' >
-											<div class='percent' >90%</div>
-										</div>
-									</div>
-									
-								</div>
-								
-								
-								
-							</div>
-							
-							
-							
-						</div>
-						
-					</div>
-					
-				</div>
-				
-				<div class='footer bg-lightgray section-block' >
-					
-					<div class='container' >
-						
-						<div class='row' >
-							
-							<div class='col-xs-6 text-left' >
-								<h4>Jose Molina</h4>
-							</div>
-							
-							<div class='col-xs-6 text-right' >
-								<ul class='footer-social' >
-									<li>
-										<a href='https://web.facebook.com/josedaniel.molinajimenez.7' target="_blank">
-											<i class='ion-social-facebook' ></i>
-										</a>
-									</li>
-									<li>
-										<a href='https://wa.me/+573213485867' target="_blank">
-											<i class='ion-social-whatsapp' ></i>
-										</a>
-									</li>
-									<li>
-										<a href='https://www.instagram.com/iamjose_priv/' target="_blank">
-											<i class='ion-social-instagram' ></i>
-										</a>
-									</li>
-									<li>
-										<a href='https://github.com/Parclan' target="_blank">
-											<i class='ion-social-github' ></i>
-										</a>
-									</li>
-								</ul>
-							</div>
-							
-						</div>
-						
-						
-					</div>
-					
-				</div>
-				
-				
-			</section>
-			<!--=============================================================================
-				/Resume Section
-			===============================================================================-->
-			
-			<!--=============================================================================
-				Portfolio Section
-			===============================================================================-->
-			<section id='portfolio' class='portfolio-section section' >
-				
-				<div class='portfolio-block section-block' >
-					
-					<div class='container' >
-					
-						<div class='row' >
-							<div class='col-md-6 col-md-offset-3' >
-								
-								<div class='section-header text-center' >
-								
-									<h2 class='animate text-over-block' >Portafolio</h2>
-									
-									<!--divider-->
-									<div class='divider-draft center' ></div>
-									<!--/divider-->
-									
-									<p>
-										Mi portafolio incluye proyectos de una variedad de tamaños y complejidades, 
-										desde pequeños proyectos personales hasta proyectos de gran escala para empresas. 
-										Cada proyecto incluye una descripción, imágenes o videos, y enlaces a código o 
-										documentación.
-										Creo que mi portafolio es una herramienta valiosa que me ayuda a destacarme de 
-										la competencia. Me permite mostrar mi pasión por el desarrollo de software y mi 
-										capacidad para crear soluciones innovadoras.
-									</p>
-								
-								</div>
-								
-							</div>
-						</div>
-						
-						
-						<div id='portfolio-grid' class='portfolio-items' >
-							
-							<div class='item'  >
-								<div class='inner' >
-									
-									<img alt='symp' src='img/portfolio/1.jpg' >
-									
-									<div class='caption' >
-										
-										<div class='caption-inner' >
-										
-											<h4>Proyecto 1</h4>
-											
-											<ul class='links' >
-												
-												<li>
-													<a href='src/maquisoluciones/index.html' target="_blank">
-														<i class='ion-ios-plus-empty' ></i>
-													</a>
-												</li>
-												
-												<li>
-													<a href='img/portfolio/pag-1.png' class='image-link' >
-														<i class='ion-ios-search' ></i>
-													</a>
-												</li>
-												
-											</ul>
-										
-										</div>
-										
-										
-									</div>
-									
-								</div>
-							</div>
-							
-							<div class='item' >
-								<div class='inner' >
-									
-									<img alt='symp' src='img/portfolio/2.jpg' >
-									
-									<div class='caption' >
-										
-										<div class='caption-inner' >
-										
-											<h4>Proyecto 2</h4>
-											
-											<ul class='links' >
-												
-												<li>
-													<a href='https://parclanstore.000webhostapp.com/views/inicio.php' target="_blank">
-														<i class='ion-ios-plus-empty' ></i>
-													</a>
-												</li>
-												
-												<li>
-													<a href='img/portfolio/pag-2.png' class='image-link' >
-														<i class='ion-ios-search' ></i>
-													</a>
-												</li>
-												
-											</ul>
-										
-										</div>
-										
-										
-									</div>
-									
-								</div>
-							</div>
-							
-							<div class='item' >
-								<div class='inner' >
-									
-									<img alt='symp' src='img/portfolio/3.jpg' >
-									
-									<div class='caption' >
-										
-										<div class='caption-inner' >
-										
-											<h4>Proyecto 3</h4>
-											
-											<ul class='links' >
-												
-												<li>
-													<a href='https://tecnijuridica-sas-demandas.000webhostapp.com/controller/formulario_login.php' target="_blank">
-														<i class='ion-ios-plus-empty' ></i>
-													</a>
-												</li>
-												
-												<li>
-													<a href='img/portfolio/pag-3.png' class='image-link' >
-														<i class='ion-ios-search' ></i>
-													</a>
-												</li>
-												
-											</ul>
-										
-										</div>
-										
-										
-									</div>
-									
-								</div>
-							</div>
-
-						</div>
-						
-					</div>
-					
-				</div>
-				
-				<div class='footer bg-lightgray section-block' >
-					
-					<div class='container' >
-						
-						<div class='row' >
-							
-							<div class='col-xs-6 text-left' >
-								<h4>Jose Molina</h4>
-							</div>
-							
-							<div class='col-xs-6 text-right' >
-								<ul class='footer-social' >
-									<li>
-										<a href='https://web.facebook.com/josedaniel.molinajimenez.7' target="_blank">
-											<i class='ion-social-facebook' ></i>
-										</a>
-									</li>
-									<li>
-										<a href='https://wa.me/+573213485867' target="_blank">
-											<i class='ion-social-whatsapp' ></i>
-										</a>
-									</li>
-									<li>
-										<a href='https://www.instagram.com/iamjose_priv/' target="_blank">
-											<i class='ion-social-instagram' ></i>
-										</a>
-									</li>
-									<li>
-										<a href='https://github.com/Parclan' target="_blank">
-											<i class='ion-social-github' ></i>
-										</a>
-									</li>
-								</ul>
-							</div>
-							
-						</div>
-						
-						
-					</div>
-				
-			</section>
-			<!--=============================================================================
-				/Portfolio Section
-			===============================================================================-->
-			
-			<!--=============================================================================
-				Contact Section
-
-			<section id='contact' class='contact-section section' >
-				
-				<div class='contact-block section-block' >
-					<div class='container' >
-						<div class='row' >
-							<div class='col-md-6 col-md-offset-3' >
-							
-								<div class='section-header text-center' >
-									<h2 class='animate text-over-block' >Contact Me</h2>
-									
-									<div class='divider-draft center' ></div>
-									
-									<p>
-										I'm available for freelancing. If you want something to be built or just to say hi, feel free to shoot me a message.
-									</p>
-								</div>
-							
-							</div>
-						</div>
-						
-						<div class='row' >
-							<div class='col-md-8 col-md-offset-2' >
-								
-								<form id='contact-form' class='contact-form' action='mail.php' method='post' data-toggle='validator' >
-									
-									<div id='contact-form-result' ></div>
-									
-									<div class='row' >
-										
-										<div class='col-md-6' >
-											
-											<div class='form-group' >
-												<input type='text' class='form-control' placeholder='Name' required>
-												
-												<div class='help-block with-errors' ></div>
-											</div>
-										
-										</div>
-										
-										<div class='col-md-6' >
-											<div class='form-group' >
-												<input type='email' class='form-control' placeholder='Email' required>
-												
-												<div class='help-block with-errors' ></div>
-							
-											</div>
-										</div>
-										
-									</div>
-									
-									<div class='row' >
-										
-										<div class='col-md-6' >
-											<div class='form-group' >
-												<input type='text' class='form-control' placeholder='Phone' required>
-												<div class='help-block with-errors' ></div>
-												
-											</div>
-										</div>
-										
-										<div class='col-md-6' >
-											<div class='form-group' >
-												<input type='text' class='form-control' placeholder='Website' required>
-												<div class='help-block with-errors' ></div>
-												
-											</div>
-										</div>
-										
-									</div>
-									
-									<div class='form-group' >
-										<textarea rows='5' class='form-control' placeholder='Message' required></textarea>
-										<div class='help-block with-errors' ></div>
-									</div>
-									
-									<div class='form-group text-center' >
-										<button type='submit' class='symp-btn' >Send Message</button>
-									</div>
-									
-									
-								</form>
-							</div>
-						</div>
-
-						
-					</div>
-				</div>
-			
-				
-				<div class='footer bg-lightgray section-block' >
-					
-					<div class='container' >
-						
-						<div class='row' >
-							
-							<div class='col-xs-6 text-left' >
-								<h4>Johny Doe</h4>
-							</div>
-							
-							<div class='col-xs-6 text-right' >
-								<ul class='footer-social' >
-									<li>
-										<a href='#' >
-											<i class='ion-social-facebook' ></i>
-										</a>
-									</li>
-									<li>
-										<a href='#' >
-											<i class='ion-social-twitter' ></i>
-										</a>
-									</li>
-									<li>
-										<a href='#' >
-											<i class='ion-social-pinterest' ></i>
-										</a>
-									</li>
-									<li>
-										<a href='#' >
-											<i class='ion-social-dribbble' ></i>
-										</a>
-									</li>
-								</ul>
-							</div>
-							
-						</div>
-						
-						
-					</div>
-					
-				</div>
-				
-				
-			</section>
-
-				/Contact Section
-			===============================================================================-->
-			
-			
-			<!--close button-->
-			<div class='close-btn' >
-				<span></span>
-				<span></span>
 			</div>
-			<!--/close button-->
-			
-			
-		</div>
-		<!--=============================================================================
-			/Main Wrapper
-		===============================================================================-->
-		
-		
-		<!--=============================================================================
-			JavaScript Files
-		===============================================================================-->
-		<script src='js/jquery.min.js' ></script>
-		<script src='js/jquery.stellar.min.js' ></script>
-		<script src='js/modernizr.js' ></script>
-		<script src='js/owl.carousel.min.js' ></script>
-		<script src='js/jquery.shuffle.min.js' ></script>
-		<script src='js/jquery.magnific-popup.min.js' ></script>
-		<script src='js/validator.min.js' ></script>
-		<script src='js/smoothscroll.js' ></script>
-		<script src='js/script.js' ></script>
-		
-		
-		
+		</section>
+
+		<!-- STACK -->
+		<section id="stack">
+			<div class="section-inner">
+				<div class="section-header">
+					<div class="section-eyebrow fade-up">
+						<i class="ph-duotone ph-code"></i> Tech Stack
+					</div>
+
+					<h2 class="section-title fade-up">Tecnologías que domino</h2>
+					<p class="section-sub fade-up">Lenguajes, frameworks y herramientas con las que trabajo día a día.</p>
+				</div>
+
+				<div class="stack-grid">
+
+					<div class="stack-card fade-up">
+						<div class="stack-icon" style="background:rgba(59,130,246,0.1)">
+							<i class="ph-duotone ph-file-py" style="color:#3b82f6;font-size:1.6rem"></i>
+						</div>
+
+						<div class="stack-info">
+							<div class="sname">Python</div>
+							<div class="stype">language</div>
+							<div class="lvl">
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot"></div>
+								<div class="lvl-dot"></div>
+							</div>
+						</div>
+						
+					</div>
+
+					<div class="stack-card fade-up">
+						<div class="stack-icon" style="background:rgba(139,92,246,0.1)">
+							<i class="ph-duotone ph-file-code" style="color:#8b5cf6;font-size:1.6rem"></i>
+						</div>
+
+						<div class="stack-info">
+							<div class="sname">PHP</div>
+							<div class="stype">language</div>
+							<div class="lvl">
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="stack-card fade-up">
+						<div class="stack-icon" style="background:rgba(250,204,21,0.1)">
+							<i class="ph-duotone ph-file-js" style="color:#facc15;font-size:1.6rem"></i>
+						</div>
+
+						<div class="stack-info">
+							<div class="sname">JavaScript</div>
+							<div class="stype">language</div>
+							<div class="lvl">
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="stack-card fade-up">
+						<div class="stack-icon" style="background:rgba(0,212,255,0.1)">
+							<i class="ph-duotone ph-file-ts" style="color:var(--accent);font-size:1.6rem"></i>
+						</div>
+
+						<div class="stack-info">
+							<div class="sname">TypeScript</div>
+							<div class="stype">language</div>
+							<div class="lvl">
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot"></div>
+								<div class="lvl-dot"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="stack-card fade-up">
+						<div class="stack-icon" style="background:rgba(0,212,255,0.1)">
+							<i class="ph-duotone ph-atom" style="color:var(--accent);font-size:1.6rem"></i>
+						</div>
+
+						<div class="stack-info">
+							<div class="sname">React</div>
+							<div class="stype">framework/ui</div>
+							<div class="lvl">
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot"></div>
+								<div class="lvl-dot"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="stack-card fade-up">
+						<div class="stack-icon" style="background:rgba(239,68,68,0.1)">
+							<i class="ph-duotone ph-fire" style="color:#ef4444;font-size:1.6rem"></i>
+						</div>
+
+						<div class="stack-info">
+							<div class="sname">Laravel</div>
+							<div class="stype">framework/php</div>
+							<div class="lvl">
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot"></div>
+								<div class="lvl-dot"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="stack-card fade-up">
+						<div class="stack-icon" style="background:rgba(16,185,129,0.1)">
+							<i class="ph-duotone ph-rocket-launch" style="color:var(--accent3);font-size:1.6rem"></i>
+						</div>
+
+						<div class="stack-info">
+							<div class="sname">FastAPI</div>
+							<div class="stype">framework/python</div>
+							<div class="lvl">
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot"></div>
+								<div class="lvl-dot"></div>
+								<div class="lvl-dot"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="stack-card fade-up">
+						<div class="stack-icon" style="background:rgba(249,115,22,0.1)">
+							<i class="ph-duotone ph-flame" style="color:#f97316;font-size:1.6rem"></i>
+						</div>
+
+						<div class="stack-info">
+							<div class="sname">CodeIgniter</div>
+							<div class="stype">framework/php</div>
+							<div class="lvl">
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="stack-card fade-up">
+						<div class="stack-icon" style="background:rgba(0,212,255,0.08)">
+							<i class="ph-duotone ph-database" style="color:var(--accent);font-size:1.6rem"></i>
+						</div>
+
+						<div class="stack-info">
+							<div class="sname">SQL</div>
+							<div class="stype">database</div>
+							<div class="lvl">
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot on"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="stack-card fade-up">
+						<div class="stack-icon" style="background:rgba(124,58,237,0.1)">
+							<i class="ph-duotone ph-git-branch" style="color:#7c3aed;font-size:1.6rem"></i></div>
+						<div class="stack-info">
+							<div class="sname">Git</div>
+							<div class="stype">version control</div>
+							<div class="lvl">
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="stack-card fade-up">
+						<div class="stack-icon" style="background:rgba(16,185,129,0.1)">
+							<i class="ph-duotone ph-cloud" style="color:var(--accent3);font-size:1.6rem"></i>
+						</div>
+
+						<div class="stack-info">
+							<div class="sname">REST APIs</div>
+							<div class="stype">architecture</div>
+							<div class="lvl">
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot"></div>
+								<div class="lvl-dot"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="stack-card fade-up">
+						<div class="stack-icon" style="background:rgba(59,130,246,0.1)">
+							<i class="ph-duotone ph-cube" style="color:#3b82f6;font-size:1.6rem"></i>
+						</div>
+
+						<div class="stack-info">
+							<div class="sname">Docker</div>
+							<div class="stype">devops</div>
+							<div class="lvl">
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot on"></div>
+								<div class="lvl-dot"></div>
+								<div class="lvl-dot"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- PROYECTOS -->
+		<section id="projects">
+			<div class="section-inner">
+				<div class="section-header">
+				<div class="section-eyebrow fade-up"><i class="ph-duotone ph-squares-four"></i> Proyectos</div>
+				<h2 class="section-title fade-up">Trabajo destacado</h2>
+				<p class="section-sub fade-up">Proyectos que reflejan mi forma de pensar, construir y resolver problemas.</p>
+				</div>
+				<div class="projects-grid">
+				<div class="project-card fade-up">
+					<div class="project-top">
+					<div class="project-icon" style="background:rgba(0,212,255,0.1)"><i class="ph-duotone ph-chart-line-up" style="color:var(--accent)"></i></div>
+					<div class="project-links">
+						<a href="#" class="project-link-btn"><i class="ph-duotone ph-github-logo"></i></a>
+						<a href="#" class="project-link-btn"><i class="ph-duotone ph-arrow-square-out"></i></a>
+					</div>
+					</div>
+					<div class="project-body">
+					<h3>Nombre del Proyecto 1</h3>
+					<p>Descripción del proyecto. Qué problema resuelve, cuál fue tu rol y el impacto que generó en producción.</p>
+					<div class="tech-tags"><span class="tech-tag">FastAPI</span><span class="tech-tag">React</span><span class="tech-tag">TypeScript</span><span class="tech-tag">SQL</span></div>
+					</div>
+				</div>
+				<div class="project-card fade-up">
+					<div class="project-top">
+					<div class="project-icon" style="background:rgba(124,58,237,0.1)"><i class="ph-duotone ph-shopping-cart" style="color:#a78bfa"></i></div>
+					<div class="project-links">
+						<a href="#" class="project-link-btn"><i class="ph-duotone ph-github-logo"></i></a>
+						<a href="#" class="project-link-btn"><i class="ph-duotone ph-arrow-square-out"></i></a>
+					</div>
+					</div>
+					<div class="project-body">
+					<h3>Nombre del Proyecto 2</h3>
+					<p>Descripción del proyecto. Qué problema resuelve, cuál fue tu rol y el impacto que generó en producción.</p>
+					<div class="tech-tags"><span class="tech-tag">Laravel</span><span class="tech-tag">PHP</span><span class="tech-tag">JavaScript</span><span class="tech-tag">MySQL</span></div>
+					</div>
+				</div>
+				<div class="project-card fade-up">
+					<div class="project-top">
+					<div class="project-icon" style="background:rgba(16,185,129,0.1)"><i class="ph-duotone ph-robot" style="color:var(--accent3)"></i></div>
+					<div class="project-links">
+						<a href="#" class="project-link-btn"><i class="ph-duotone ph-github-logo"></i></a>
+						<a href="#" class="project-link-btn"><i class="ph-duotone ph-arrow-square-out"></i></a>
+					</div>
+					</div>
+					<div class="project-body">
+					<h3>Nombre del Proyecto 3</h3>
+					<p>Descripción del proyecto. Qué problema resuelve, cuál fue tu rol y el impacto que generó en producción.</p>
+					<div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">FastAPI</span><span class="tech-tag">React</span></div>
+					</div>
+				</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- EXPERIENCIA -->
+		<section id="experience">
+			<div class="section-inner">
+
+				<div class="section-header">
+					<div class="section-eyebrow fade-up">
+						<i class="ph-duotone ph-briefcase"></i> Experiencia
+					</div>
+					<h2 class="section-title fade-up">Trayectoria</h2>
+					<p class="section-sub fade-up">Roles y empresas que han formado mi manera de desarrollar software.</p>
+				</div>
+
+				<div class="exp-grid">
+					<div class="exp-card fade-up">
+						<div class="exp-date">2024 — 2026</div>
+
+						<div>
+							<h3>Ingeniero Desarrollador Junior</h3>
+							<div class="exp-company"><i class="ph-duotone ph-buildings"></i> ASISTENCIA MÉDICA INMEDIATA S.A.S</div>
+							<p>Trabajé como programador de software en una empresa dedicada al sector salud. Allí desarrollé y mantuve sistemas que mejoraron procesos clínicos y administrativos, 
+								contribuyendo a su transformación digital.</p>
+						</div>
+					</div>
+					<div class="exp-card fade-up">
+						<div class="exp-date">2023 — 2024</div>
+
+						<div>
+							<h3>Desarrollador Backend y Soporte tecnico</h3>
+							<div class="exp-company"><i class="ph-duotone ph-buildings"></i> TECNIJURIDICA S.A.S</div>
+							<p>Contribuí a la empresa brindando soporte técnico integral a los equipos informáticos y desarrollando programas que optimizan las tareas operativas. Además, 
+								asumí el rol de soporte al cliente, asegurando una atención de calidad y resolviendo eficazmente sus necesidades.</p>
+						</div>
+					</div>
+				</div>
+
+				<br><br>
+
+				<div class="section-header">
+					<div class="section-eyebrow fade-up">
+						<i class="ph-duotone ph-student"></i> Educación
+					</div>
+				</div>
+
+				<div class="exp-grid">
+					<div class="exp-card fade-up">
+						<div class="exp-date">2025 — Actualmente</div>
+
+						<div>
+							<h3>Ingeniero de sistemas</h3>
+							<div class="exp-company">
+								<i class="ph-duotone ph-graduation-cap"></i> UNIMINUTO
+							</div>
+						</div>
+					</div>
+
+					<div class="exp-card fade-up">
+						<div class="exp-date">2022 — 2025</div>
+
+						<div>
+							<h3>Tecnólogo en Desarrollo de Software</h3>
+						
+							<div class="exp-company">
+								<i class="ph-duotone ph-graduation-cap"></i> SENA
+							</div>
+						</div>
+					</div>
+
+					<div class="exp-card fade-up">
+						<div class="exp-date">2020 — 2021</div>
+
+						<div>
+							<h3>Técnico en Programación de Software</h3>
+						
+							<div class="exp-company">
+								<i class="ph-duotone ph-graduation-cap"></i> SENA
+							</div>
+						</div>
+					</div>
+
+					<div class="exp-card fade-up">
+						<div class="exp-date">2015 — 2021</div>
+
+						<div>
+							<h3>Escuela Técnica</h3>
+						
+							<div class="exp-company">
+								<i class="ph-duotone ph-student"></i> Institución Educativa Técnico Francisco de Paula Santander
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- SOBRE MÍ -->
+		<section id="about">
+			<div class="section-inner">
+				<div class="about-grid">
+					<div>
+						<div class="section-eyebrow fade-up">
+							<i class="ph-duotone ph-user-circle"></i> Sobre mí
+						</div>
+						<h2 class="section-title fade-up">¿Quién soy?</h2>
+						<div class="about-stats">
+							<div class="about-stat fade-up">
+								<div class="num">3</div>
+								<div class="lbl">Años de experiencia</div>
+							</div>
+							<div class="about-stat fade-up">
+								<div class="num">8</div>
+								<div class="lbl">Tecnologías dominadas</div>
+							</div>
+							<div class="about-stat fade-up">
+								<div class="num">∞</div>
+								<div class="lbl">Ganas de aprender</div>
+							</div>
+						</div>
+					</div>
+					<div class="about-text fade-up">
+						<p>Soy un desarrollador de software apasionado por construir soluciones que realmente importan. Me especializo en el desarrollo full stack, conectando backends robustos con interfaces limpias e intuitivas.</p>
+						<p>Trabajo con Python y FastAPI para APIs de alto rendimiento, con Laravel y CodeIgniter para proyectos PHP, y con React + TypeScript en el frontend. SQL es mi herramienta para modelar y consultar datos de manera eficiente.</p>
+						<p>Me gusta el código limpio, la arquitectura bien pensada y los equipos donde se aprende todos los días. Siempre estoy buscando el próximo reto que me haga crecer.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CONTACTO -->
+		<section id="contact">
+			<div class="section-inner">
+				<div class="contact-wrap">
+					<div class="section-eyebrow fade-up">
+						<i class="ph-duotone ph-chat-dots"></i> Contacto
+					</div>
+					<br>
+					<div class="contact-links fade-up">
+						<a href="mailto:molinajimenez495@gmail.com" class="contact-btn primary"><i class="ph-duotone ph-envelope"></i> Enviar email</a>
+						<a href="https://www.linkedin.com/in/jose-daniel-molina-jim%C3%A9nez-834809247/" class="contact-btn ghost"><i class="ph-duotone ph-linkedin-logo"></i> LinkedIn</a>
+						<a href="https://github.com/Parclan" class="contact-btn ghost"><i class="ph-duotone ph-github-logo"></i> GitHub</a>
+					</div>
+					
+					<div class="contact-row fade-up">
+						<div class="contact-item"><i class="ph-duotone ph-envelope"></i><span>molinajimenez495@gmail.com</span></div>
+						<div class="contact-item"><i class="ph-duotone ph-map-pin"></i><span>Barranquilla, Colombia</span></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<p>Construido por <span>Tu Nombre</span> · 2026 · con <span>❤</span> y mucho café ☕</p>
+		</footer>
+
 	</body>
-	
 </html>
