@@ -265,19 +265,39 @@ body {
 
 .marquee-track:hover { animation-play-state: paused; }
 
-/* ── LANGUAGE TOGGLE ── */
-.lang-toggle {
+/* ── TOP NAVIGATION ── */
+.top-nav-left {
     position: fixed;
     top: 6px;
-    right: 20px;
-    z-index: 20;
+    left: 6px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.top-nav-left .anim-icons {
+    animation: fadeInDown 0.6s ease forwards;
+}
+
+.top-nav-right {
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    z-index: 10;
+    animation: fadeInDown 0.6s ease forwards;
+}
+
+/* ── LANGUAGE TOGGLE ── */
+.lang-toggle {
     display: flex;
     gap: 12px;
     background: rgba(13, 17, 23, 0.8);
     padding: 8px 14px;
-    border-radius: 6px;
+    border-radius: 10px;
     border: 1px solid #30363d;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(3px);
+    animation: fadeInDown 0.6s ease forwards;
 }
 
 .lang-btn {

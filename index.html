@@ -34,35 +34,39 @@
   <!-- ═══════════════ HERO SECTION ════════════════ -->
   <section id="home" class="relative min-h-screen flex flex-col justify-between overflow-hidden">
 
-    <!-- Social icons top-left -->
-    <div class="anim-icons fixed top-6 left-6 z-10">
-      <div class="social-icons-container">
-        <a href="https://github.com/Parclan" target="_blank" class="top-icon" title="GitHub">
-          <i class="fi fi-brands-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/jose-daniel-molina-jimenez-834809247" target="_blank" class="top-icon" title="LinkedIn">
-          <i class="fi fi-brands-linkedin"></i>  
-        </a>
-        <a href="assets/CV - Jose Molina.pdf" class="top-icon" title="Download CV" download>
-          <i class= "fi fi-sr-person-cv"></i>
-        </a>
-        <a href="mailto:molinajimenez495@gmail.com" class="top-icon" title="Email">
-          <i class="fi fi-sr-envelope"></i>
-        </a>
+    <!-- Top Navigation -->
+    <!-- Social icons + Language Toggle (left side) -->
+    <div class="top-nav-left">
+      <!-- Social icons -->
+      <div class="anim-icons">
+        <div class="social-icons-container">
+          <a href="https://github.com/Parclan" target="_blank" class="top-icon" title="GitHub">
+            <i class="fi fi-brands-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/jose-daniel-molina-jimenez-834809247" target="_blank" class="top-icon" title="LinkedIn">
+            <i class="fi fi-brands-linkedin"></i>  
+          </a>
+          <a href="assets/CV - Jose Molina.pdf" class="top-icon" title="Download CV" download>
+            <i class= "fi fi-sr-person-cv"></i>
+          </a>
+          <a href="mailto:molinajimenez495@gmail.com" class="top-icon" title="Email">
+            <i class="fi fi-sr-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Language Toggle -->
+      <div class="lang-toggle">
+        <button class="lang-btn active" id="lang-en" data-lang="en">EN</button>
+        <button class="lang-btn" id="lang-es" data-lang="es">ES</button>
       </div>
     </div>
 
-    <!-- Projects nav top-right -->
-    <div class="anim-icons absolute top-6 right-6 z-10">
+    <!-- Projects nav (right side) -->
+    <div class="top-nav-right">
       <a href="#projects" class="section-label hover:text-[#e6edf3] transition-colors">
         <span data-en="Projects ↓" data-es="Proyectos ↓">Projects ↓</span>
       </a>
-    </div>
-
-    <!-- Language Toggle -->
-    <div class="lang-toggle">
-      <button class="lang-btn active" id="lang-en" data-lang="en">EN</button>
-      <button class="lang-btn" id="lang-es" data-lang="es">ES</button>
     </div>
 
     <!-- BIG HERO TEXT — bottom aligned -->
