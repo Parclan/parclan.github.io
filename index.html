@@ -1,542 +1,385 @@
 <!DOCTYPE html>
-<html lang="es">
-	<head>
-		<meta charset="UTF-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<title>Parclan — Developer</title>
-		<script src="https://cdn.tailwindcss.com"></script>
-		<script src="https://unpkg.com/@phosphor-icons/web"></script>
-		<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
-		<link rel="stylesheet" href="css/index.css"/>
-		<link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
-		<script src="js/index.js" defer></script>
-	</head>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parclan - Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-brands/css/uicons-brands.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
 
-	<body>
+  <script src="js/index.js"></script>
+  <script>
+	tailwind.config = {
+		theme: {
+			extend: {
+			fontFamily: {
+				mono: ['Geist Mono', 'monospace'],
+				sans: ['Inter', 'sans-serif'],
+			}
+			}
+		}
+	};
+  </script>
+</head>
+<body>
 
-		<div class="cursor-glow" id="glow"></div>
+  <!-- ═══════════════ HERO SECTION ════════════════ -->
+  <section id="home" class="relative min-h-screen flex flex-col justify-between overflow-hidden">
 
-		<!-- NAV -->
-		<nav>
-			<div class="nav-inner">
-				<div class="nav-logo"><span>~/</span>Parclan</div>
-				<div class="nav-links">
-				<a href="#stack">Stack</a>
-				<a href="#projects">Proyectos</a>
-				<a href="#experience">Experiencia</a>
-				<a href="#about">Sobre mí</a>
-				</div>
-				<a href="#contact" class="nav-cta">Contacto</a>
-			</div>
-		</nav>
+    <!-- Social icons top-left -->
+    <div class="anim-icons fixed top-6 left-6 z-10">
+      <div class="social-icons-container">
+        <a href="https://github.com/Parclan" target="_blank" class="top-icon" title="GitHub">
+          <i class="fi fi-brands-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/jose-daniel-molina-jimenez-834809247" target="_blank" class="top-icon" title="LinkedIn">
+          <i class="fi fi-brands-linkedin"></i>  
+        </a>
+        <a href="assets/CV - Jose Molina.pdf" class="top-icon" title="Download CV" download>
+          <i class= "fi fi-sr-person-cv"></i>
+        </a>
+        <a href="mailto:molinajimenez495@gmail.com" class="top-icon" title="Email">
+          <i class="fi fi-sr-envelope"></i>
+        </a>
+      </div>
+    </div>
 
-		<!-- HERO -->
-		<section class="hero">
-			<div class="hero-inner">
-				<div>
-				<div class="hero-pre"><i class="ph-duotone ph-terminal-window"></i> Hello World!<span class="blink">█</span></div>
-				<h1>
-					Hola, soy <span class="name">Jose Molina</span>
-					<span class="role">Software Developer</span>
-				</h1>
-				<p class="hero-desc">Construyo aplicaciones web robustas y escalables. Apasionado por el código limpio, la arquitectura bien pensada y las soluciones que realmente resuelven problemas.</p>
-				<div class="hero-btns">
-					<a href="#projects" class="btn-primary"><i class="ph-duotone ph-folder-open"></i> Ver proyectos</a>
-					<a href="#contact" class="btn-ghost"><i class="ph-duotone ph-paper-plane-tilt"></i> Hablemos</a>
-				</div>
-				</div>
-				<div class="terminal fade-up">
-				<div class="terminal-bar">
-					<div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div>
-					<div class="terminal-title">developer.json</div>
-				</div>
-				<div class="terminal-body">
-					<span class="t-line"><span class="t-comment">// Mi stack técnico</span></span>
-					<span class="t-line"><span class="t-cmd">{</span></span>
-					<span class="t-line">&nbsp;&nbsp;<span class="t-key">"name"</span><span class="t-cmd">: </span><span class="t-str">"Jose Molina"</span><span class="t-cmd">,</span></span>
-					<span class="t-line">&nbsp;&nbsp;<span class="t-key">"role"</span><span class="t-cmd">: </span><span class="t-str">"Full Stack Developer"</span><span class="t-cmd">,</span></span>
-					<span class="t-line">&nbsp;&nbsp;<span class="t-key">"languages"</span><span class="t-cmd">: [</span></span>
-					<span class="t-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-str">"Python"</span><span class="t-cmd">, </span><span class="t-str">"PHP"</span><span class="t-cmd">,</span></span>
-					<span class="t-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-str">"JavaScript"</span><span class="t-cmd">, </span><span class="t-str">"TypeScript"</span></span>
-					<span class="t-line">&nbsp;&nbsp;<span class="t-cmd">],</span></span>
-					<span class="t-line">&nbsp;&nbsp;<span class="t-key">"frameworks"</span><span class="t-cmd">: [</span></span>
-					<span class="t-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-str">"React"</span><span class="t-cmd">, </span><span class="t-str">"Laravel"</span><span class="t-cmd">,</span></span>
-					<span class="t-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-str">"FastAPI"</span><span class="t-cmd">, </span><span class="t-str">"CodeIgniter"</span></span>
-					<span class="t-line">&nbsp;&nbsp;<span class="t-cmd">],</span></span>
-					<span class="t-line">&nbsp;&nbsp;<span class="t-key">"database"</span><span class="t-cmd">: </span><span class="t-str">"SQL"</span><span class="t-cmd">,</span></span>
-					<span class="t-line">&nbsp;&nbsp;<span class="t-key">"available"</span><span class="t-cmd">: </span><span class="t-bool">true</span></span>
-					<span class="t-line"><span class="t-cmd">}</span></span>
-				</div>
-				</div>
-			</div>
-		</section>
+    <!-- Projects nav top-right -->
+    <div class="anim-icons absolute top-6 right-6 z-10">
+      <a href="#projects" class="section-label hover:text-[#e6edf3] transition-colors">
+        <span data-en="Projects ↓" data-es="Proyectos ↓">Projects ↓</span>
+      </a>
+    </div>
 
-		<!-- STACK -->
-		<section id="stack">
-			<div class="section-inner">
-				<div class="section-header">
-					<div class="section-eyebrow fade-up">
-						<i class="ph-duotone ph-code"></i> Tech Stack
-					</div>
+    <!-- Language Toggle -->
+    <div class="lang-toggle">
+      <button class="lang-btn active" id="lang-en" data-lang="en">EN</button>
+      <button class="lang-btn" id="lang-es" data-lang="es">ES</button>
+    </div>
 
-					<h2 class="section-title fade-up">Tecnologías que domino</h2>
-					<p class="section-sub fade-up">Lenguajes, frameworks y herramientas con las que trabajo día a día.</p>
-				</div>
+    <!-- BIG HERO TEXT — bottom aligned -->
+    <div class="anim-hero mt-auto pb-0 px-2 sm:px-4 leading-none">
+      <div class="hero-word">PARCLAN</div>
+    </div>
 
-				<div class="stack-grid">
+    <!-- Scroll hint -->
+    <div class="absolute bottom-8 right-8 flex flex-col items-center gap-2 opacity-40">
+      <span class="section-label" style="writing-mode:vertical-rl; letter-spacing:0.2em;">scroll</span>
+      <div style="width:1px; height:40px; background:var(--muted);"></div>
+    </div>
 
-					<div class="stack-card fade-up">
-						<div class="stack-icon" style="background:rgba(59,130,246,0.1)">
-							<i class="ph-duotone ph-file-py" style="color:#3b82f6;font-size:1.6rem"></i>
-						</div>
+  </section>
 
-						<div class="stack-info">
-							<div class="sname">Python</div>
-							<div class="stype">language</div>
-							<div class="lvl">
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot"></div>
-								<div class="lvl-dot"></div>
-							</div>
-						</div>
-						
-					</div>
+  <!-- ═══════════════ ABOUT STRIP ════════════════ -->
+  <section class="max-w-4xl mx-auto px-6 py-24">
+    <hr class="line mb-16 reveal" />
 
-					<div class="stack-card fade-up">
-						<div class="stack-icon" style="background:rgba(139,92,246,0.1)">
-							<i class="ph-duotone ph-file-code" style="color:#8b5cf6;font-size:1.6rem"></i>
-						</div>
+    <div class="grid md:grid-cols-2 gap-12 items-start">
+      <!-- Left: avatar + name -->
+      <div class="reveal-left">
+        <img
+          src="img/Foto.png"
+          class="w-16 h-16 rounded-full border border-[#30363d] mb-6 object-cover"
+        />
+        <h1 style="font-family:'Geist Mono',monospace; font-size:clamp(1.6rem,3vw,2.5rem); font-weight:700; line-height:1.15; letter-spacing:-0.03em; color:#e6edf3;">
+          Hi, I'm<br/>Jose Molina
+        </h1>
+        <p class="section-label mt-4" data-en="Building products. Growing people." data-es="Construyendo productos. Haciendo crecer personas.">Building products. Growing people.</p>
+      </div>
 
-						<div class="stack-info">
-							<div class="sname">PHP</div>
-							<div class="stype">language</div>
-							<div class="lvl">
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot"></div>
-							</div>
-						</div>
-					</div>
+      <!-- Right: bio + cta -->
+      <div class="reveal-right delay-200">
+        <p style="color:#8d96a0; font-size:1rem; line-height:1.8;" class="mb-8" data-en="I'm a Fullstack web developer with dedicated experience in frontend, working with React and Tailwind. I complement my skills with PHP, Laravel, Node.js, and Python, plus API integration. I work with databases like MySQL, MariaDB, and PostgreSQL, and I have experience in microservices development using Docker." data-es="Soy desarrollador web Fullstack con experiencia dedicada al frontend, trabajando con React y Tailwind. Complemento mis habilidades con PHP, Laravel, Node.js y Python, además de integración de APIs. Manejo bases de datos como MySQL, MariaDB y PostgreSQL, y tengo experiencia en el desarrollo de microservicios utilizando Docker.">
+          Soy desarrollador web Fullstack con experiencia dedicada al frontend, trabajando con React y Tailwind. 
+          Complemento mis habilidades con PHP, Laravel, Node.js y Python, además de integración de APIs. 
+          Manejo bases de datos como MySQL, MariaDB y PostgreSQL, y tengo experiencia en el 
+          desarrollo de microservicios utilizando Docker.
+        </p>
+        <a href="#projects" class="btn-white">
+          View my work
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 256 256"><path d="M205.66,149.66l-72,72a8,8,0,0,1-11.32,0l-72-72a8,8,0,0,1,11.32-11.32L120,188.69V40a8,8,0,0,1,16,0V188.69l58.34-58.35a8,8,0,0,1,11.32,11.32Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
 
-					<div class="stack-card fade-up">
-						<div class="stack-icon" style="background:rgba(250,204,21,0.1)">
-							<i class="ph-duotone ph-file-js" style="color:#facc15;font-size:1.6rem"></i>
-						</div>
+  <!-- ═══════════════ SKILLS SECTION ════════════════ -->
+  <section class="max-w-4xl mx-auto px-6 py-24">
+    <div class="flex items-end justify-between mb-12 reveal">
+      <div>
+        <p class="section-label mb-3">/ <span data-en="tech stack" data-es="stack de tecnologías">tech stack</span></p>
+        <h2 style="font-family:'Geist Mono',monospace; font-size:clamp(1.5rem,3vw,2.2rem); font-weight:700; color:#e6edf3; letter-spacing:-0.03em;">
+          <span data-en="Technologies &amp; Tools" data-es="Tecnologías &amp; Herramientas">Technologies & Tools</span>
+        </h2>
+      </div>
+    </div>
 
-						<div class="stack-info">
-							<div class="sname">JavaScript</div>
-							<div class="stype">language</div>
-							<div class="lvl">
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot"></div>
-							</div>
-						</div>
-					</div>
+    <!-- Frontend -->
+    <div class="mb-12 reveal delay-100">
+      <p class="section-label mb-6" style="font-size:0.75rem;"><span data-en="FRONTEND" data-es="FRONTEND">FRONTEND</span></p>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        <!-- React -->
+        <div class="flex flex-col items-center p-4 border border-[#30363d] rounded-lg bg-[#0d1117] hover:border-[#484f58] transition-colors">
+          <i class="fab fa-react" style="font-size:32px; color:#61dafb; margin-bottom:8px;"></i>
+          <span style="font-family:'Geist Mono',monospace; font-size:0.85rem; color:#e6edf3; text-align:center; margin-top:8px;">React</span>
+        </div>
+        <!-- Next.js -->
+        <div class="flex flex-col items-center p-4 border border-[#30363d] rounded-lg bg-[#0d1117] hover:border-[#484f58] transition-colors">
+          <div style="height:32px; display:flex; align-items:center; justify-content:center; border-radius:100%; background:#fff;">
+            <img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" alt="Next.js" style="width:32px; ">
+          </div>
+          <span style="font-family:'Geist Mono',monospace; font-size:0.85rem; color:#e6edf3; text-align:center; margin-top:16px;">Next.js</span>
+        </div>
+        <!-- Codeineiter -->
+        <div class="flex flex-col items-center p-4 border border-[#30363d] rounded-lg bg-[#0d1117] hover:border-[#484f58] transition-colors">
+          <img src="https://codeigniter.com/assets/icons/44521256.png" alt="Codeineiter" style="width:32px; ">
+          <span style="font-family:'Geist Mono',monospace; font-size:0.85rem; color:#e6edf3; text-align:center; margin-top:16px;">Codeineiter</span>
+        </div>
+        <!-- TypeScript -->
+        <div class="flex flex-col items-center p-4 border border-[#30363d] rounded-lg bg-[#0d1117] hover:border-[#484f58] transition-colors">
+          <i class="fi fi-brands-typescript" style="font-size:32px; color:#3178c6;"></i>
+          <span style="font-family:'Geist Mono',monospace; font-size:0.85rem; color:#e6edf3; text-align:center;">TypeScript</span>
+        </div>
+        <!-- Javascript -->
+        <div class="flex flex-col items-center p-4 border border-[#30363d] rounded-lg bg-[#0d1117] hover:border-[#484f58] transition-colors">
+          <i class="fab fa-js" style="font-size:32px; color:#f7df1e; margin-bottom:8px;"></i>
+          <span style="font-family:'Geist Mono',monospace; font-size:0.85rem; color:#e6edf3; text-align:center; margin-top:8px">Javascript</span>
+        </div>
+        <!-- Tailwind -->
+        <div class="flex flex-col items-center p-4 border border-[#30363d] rounded-lg bg-[#0d1117] hover:border-[#484f58] transition-colors">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/1280px-Tailwind_CSS_Logo.svg.png" alt="Tailwind CSS" style="width:32px; margin-bottom:8px;">
+          <span style="font-family:'Geist Mono',monospace; font-size:0.85rem; color:#e6edf3; text-align:center; margin-top:8px;">Tailwind</span>
+        </div>
+        <!-- Bootstrap -->
+        <div class="flex flex-col items-center p-4 border border-[#30363d] rounded-lg bg-[#0d1117] hover:border-[#484f58] transition-colors">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/3840px-Bootstrap_logo.svg.png" alt="Bootstrap" style="width:32px; margin-bottom:8px;">
+          <span style="font-family:'Geist Mono',monospace; font-size:0.85rem; color:#e6edf3; text-align:center; margin-top:8px;">Bootstrap</span>
+        </div>
+        </div>
+      </div>
+    </div>
 
-					<div class="stack-card fade-up">
-						<div class="stack-icon" style="background:rgba(0,212,255,0.1)">
-							<i class="ph-duotone ph-file-ts" style="color:var(--accent);font-size:1.6rem"></i>
-						</div>
+    <!-- Backend -->
+    <div class="mb-12 reveal delay-200">
+      <p class="section-label mb-6" style="font-size:0.75rem;"><span data-en="BACKEND" data-es="BACKEND">BACKEND</span></p>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        <!-- Laravel -->
+        <div class="flex flex-col items-center p-4 border border-[#30363d] rounded-lg bg-[#0d1117] hover:border-[#484f58] transition-colors">
+          <i class="fab fa-laravel" style="font-size:32px; color:#ff2d20; margin-bottom:8px;"></i>
+          <span style="font-family:'Geist Mono',monospace; font-size:0.85rem; color:#e6edf3; text-align:center;">Laravel</span>
+        </div>
+        <!-- PHP -->
+        <div class="flex flex-col items-center p-4 border border-[#30363d] rounded-lg bg-[#0d1117] hover:border-[#484f58] transition-colors">
+          <i class="fab fa-php" style="font-size:32px; color:#777bb4; margin-bottom:8px;"></i>
+          <span style="font-family:'Geist Mono',monospace; font-size:0.85rem; color:#e6edf3; text-align:center;">PHP</span>
+        </div>
+        <!-- Python -->
+        <div class="flex flex-col items-center p-4 border border-[#30363d] rounded-lg bg-[#0d1117] hover:border-[#484f58] transition-colors">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/3840px-Python-logo-notext.svg.png" alt="Python" style="width:32px; margin-bottom:8px;">
+          <span style="font-family:'Geist Mono',monospace; font-size:0.85rem; color:#e6edf3; text-align:center;">Python</span>
+        </div>
+        <!-- Node.js -->
+        <div class="flex flex-col items-center p-4 border border-[#30363d] rounded-lg bg-[#0d1117] hover:border-[#484f58] transition-colors">
+          <i class="fab fa-node-js" style="font-size:32px; color:#68a063; margin-bottom:8px;"></i>
+          <span style="font-family:'Geist Mono',monospace; font-size:0.85rem; color:#e6edf3; text-align:center;">Node.js</span>
+        </div>
+        <!-- REST APIs -->
+        <div class="flex flex-col items-center p-4 border border-[#30363d] rounded-lg bg-[#0d1117] hover:border-[#484f58] transition-colors">
+          <i class="fas fa-plug" style="font-size:32px; color:#9ca3af; margin-bottom:8px;"></i>
+          <span style="font-family:'Geist Mono',monospace; font-size:0.85rem; color:#e6edf3; text-align:center;">REST APIs</span>
+        </div>
+      </div>
+    </div>
 
-						<div class="stack-info">
-							<div class="sname">TypeScript</div>
-							<div class="stype">language</div>
-							<div class="lvl">
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot"></div>
-								<div class="lvl-dot"></div>
-							</div>
-						</div>
-					</div>
+    <!-- Database & Tools -->
+    <div class="reveal delay-300">
+      <p class="section-label mb-6" style="font-size:0.75rem;"><span data-en="DATABASE &amp; TOOLS" data-es="BASE DE DATOS &amp; HERRAMIENTAS">DATABASE & TOOLS</span></p>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        <!-- MySQL -->
+        <div class="flex flex-col items-center p-4 border border-[#30363d] rounded-lg bg-[#0d1117] hover:border-[#484f58] transition-colors">
+          <i class="fi fi-brands-mysql" style="font-size:32px; color:#00758f; margin-bottom:8px;"></i>
+          <span style="font-family:'Geist Mono',monospace; font-size:0.85rem; color:#e6edf3; text-align:center;">MySQL</span>
+        </div>
+        <!-- MariaDB -->
+        <div class="flex flex-col items-center p-4 border border-[#30363d] rounded-lg bg-[#0d1117] hover:border-[#484f58] transition-colors">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx9qlAtE-LaK0rF5moSUDO8tuofBeL8CbDVg&s" alt="MariaDB" style="width: 50px; margin-bottom:8px; border-radius: 100px;">
+          <span style="font-family:'Geist Mono',monospace; font-size:0.85rem; color:#e6edf3; text-align:center;">MariaDB</span>
+        </div>
+        <!-- PostgreSQL -->
+        <div class="flex flex-col items-center p-4 border border-[#30363d] rounded-lg bg-[#0d1117] hover:border-[#484f58] transition-colors">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg" alt="PostgreSQL" style="width:32px; margin-bottom:8px;">
+          <span style="font-family:'Geist Mono',monospace; font-size:0.85rem; color:#e6edf3; text-align:center; margin-top:8px;">PostgreSQL</span>
+        </div>
+        <!-- Docker -->
+        <div class="flex flex-col items-center p-4 border border-[#30363d] rounded-lg bg-[#0d1117] hover:border-[#484f58] transition-colors">
+          <i class="fi fi-brands-docker" style="font-size:32px; color:#2560e0; margin-bottom:8px;"></i>
+          <span style="font-family:'Geist Mono',monospace; font-size:0.85rem; color:#e6edf3; text-align:center;">Docker</span>
+        </div>
+        <!-- AI / LLM -->
+        <div class="flex flex-col items-center p-4 border border-[#30363d] rounded-lg bg-[#0d1117] hover:border-[#484f58] transition-colors">
+          <i class="fas fa-brain" style="font-size:32px; color:#10b981; margin-bottom:8px;"></i>
+          <span style="font-family:'Geist Mono',monospace; font-size:0.85rem; color:#e6edf3; text-align:center;">AI / LLM</span>
+        </div>
+        <!-- Git -->
+        <div class="flex flex-col items-center p-4 border border-[#30363d] rounded-lg bg-[#0d1117] hover:border-[#484f58] transition-colors">
+          <i class="fab fa-git-alt" style="font-size:32px; color:#f34f29; margin-bottom:8px;"></i>
+          <span style="font-family:'Geist Mono',monospace; font-size:0.85rem; color:#e6edf3; text-align:center;">Git</span>
+        </div>
+        <!-- Linux -->
+        <div class="flex flex-col items-center p-4 border border-[#30363d] rounded-lg bg-[#0d1117] hover:border-[#484f58] transition-colors">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/960px-Tux.svg.png" alt="Linux" style="width:32px; margin-bottom:8px;">
+          <span style="font-family:'Geist Mono',monospace; font-size:0.85rem; color:#e6edf3; text-align:center;">Linux</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-					<div class="stack-card fade-up">
-						<div class="stack-icon" style="background:rgba(0,212,255,0.1)">
-							<i class="ph-duotone ph-atom" style="color:var(--accent);font-size:1.6rem"></i>
-						</div>
+  <!-- ═══════════════ PROJECTS ════════════════ -->
+  <section id="projects" class="max-w-4xl mx-auto px-6 py-24">
 
-						<div class="stack-info">
-							<div class="sname">React</div>
-							<div class="stype">framework/ui</div>
-							<div class="lvl">
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot"></div>
-								<div class="lvl-dot"></div>
-							</div>
-						</div>
-					</div>
+    <div class="flex items-end justify-between mb-12 reveal">
+      <div>
+        <p class="section-label mb-3" data-en="/ selected work" data-es="/ trabajo seleccionado">/ selected work</p>
+        <h2 style="font-family:'Geist Mono',monospace; font-size:clamp(1.5rem,3vw,2.2rem); font-weight:700; color:#e6edf3; letter-spacing:-0.03em;" data-en="Selected Projects" data-es="Proyectos Seleccionados">
+          Selected Projects
+        </h2>
+      </div>
+      <a href="https://github.com/parclan" target="_blank"
+         class="icon-link text-xs font-mono hidden sm:flex items-center gap-1"
+         style="font-family:'Geist Mono',monospace; font-size:0.75rem;">
+        github.com/parclan
+        <i class="ph-duotone ph-arrow-square-out" style="font-size:14px;"></i>
+      </a>
+    </div>
 
-					<div class="stack-card fade-up">
-						<div class="stack-icon" style="background:rgba(239,68,68,0.1)">
-							<i class="ph-duotone ph-fire" style="color:#ef4444;font-size:1.6rem"></i>
-						</div>
+    <div class="flex flex-col gap-4">
 
-						<div class="stack-info">
-							<div class="sname">Laravel</div>
-							<div class="stype">framework/php</div>
-							<div class="lvl">
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot"></div>
-								<div class="lvl-dot"></div>
-							</div>
-						</div>
-					</div>
+      <!-- ── Bancolombia ── -->
+      <article class="card reveal delay-100"
+        onmousemove="this.style.setProperty('--mx',event.offsetX+'px'); this.style.setProperty('--my',event.offsetY+'px')">
+        <div class="flex items-start justify-between gap-4 mb-5">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-lg border border-[#30363d] bg-[#0d1117] flex items-center justify-center flex-shrink-0">
+              <img src="https://www.bancolombia.com/wcm/connect/b8e4c3f2-36a9-497d-a125-ac04f83b0bf8/LogoBancolombia.png?MOD=AJPERES" alt="Bancolombia" style="width:20px;">
+            </div>
+            <div>
+              <h3 style="font-family:'Geist Mono',monospace; font-size:1.05rem; font-weight:700; color:#e6edf3; letter-spacing:-0.02em;">
+                Bancolombia
+              </h3>
+              <span class="section-label" style="font-size:0.6rem;">Formulario Bancolombia - No registrado - Solo entretenimiento</span>
+            </div>
+          </div>
+          <a href="https://github.com/Parclan/Login-bancolombia-NO-OFICIAL-" target="_blank" class="icon-link" title="GitHub">
+            <i class="fi fi-brands-github" style="font-size:20px;"></i>
+          </a>
+          <a href="https://login-bancolombia-no-oficial.vercel.app/" target="_blank" class="icon-link" title="Visit">
+            <i class="fi fi-rr-arrow-right"></i>
+          </a>
+        </div>
+        <p style="color:#7d8590; font-size:0.875rem; line-height:1.7;" class="mb-5" data-en="Bancolombia login recreated for educational purposes." data-es="Login bancolombia recreado para fines educativos.">
+          Login bancolombia recreado para fines educativos.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="tag">React</span>
+          <span class="tag">Javascript</span>
+          <span class="tag">Tailwind</span>
+          <span class="tag">Sileo</span>
+          <span class="tag">Phosphoricons</span>
+        </div>
+      </article>
 
-					<div class="stack-card fade-up">
-						<div class="stack-icon" style="background:rgba(16,185,129,0.1)">
-							<i class="ph-duotone ph-rocket-launch" style="color:var(--accent3);font-size:1.6rem"></i>
-						</div>
+      <!-- ── Apple Music ── -->
+      <article class="card reveal delay-200"
+        onmousemove="this.style.setProperty('--mx',event.offsetX+'px'); this.style.setProperty('--my',event.offsetY+'px')">
+        <div class="flex items-start justify-between gap-4 mb-5">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-lg border border-[#30363d] bg-[#0d1117] flex items-center justify-center flex-shrink-0">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Apple_Music_Icon.svg/960px-Apple_Music_Icon.svg.png" alt="Apple Music" style="width:20px;">
+            </div>
+            <div>
+              <h3 style="font-family:'Geist Mono',monospace; font-size:1.05rem; font-weight:700; color:#e6edf3; letter-spacing:-0.02em;">
+                Apple Music
+              </h3>
+              <span class="section-label" style="font-size:0.6rem;">Open Source · Music Streaming App</span>
+            </div>
+          </div>
+          <a href="https://github.com/Parclan/applemusic-dev" target="_blank" class="icon-link" title="GitHub">
+            <i class="fi fi-brands-github" style="font-size:20px;"></i>
+          </a>
+          <a href="https://applemusic-dev.vercel.app/" target="_blank" class="icon-link" title="Visit">
+            <i class="fi fi-rr-arrow-right"></i>
+          </a>
+        </div>
+        <p style="color:#7d8590; font-size:0.875rem; line-height:1.7;" class="mb-5" data-en="User interface for a music streaming application. (For educational purposes)" data-es="Interfaz de usuario para una aplicación de música. (Para fines educativos)">
+          Interfaz de usuario para una aplicación de música. (Para fines educativos)
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="tag">React</span>
+          <span class="tag">Javascript</span>
+          <span class="tag">Tailwind</span>
+        </div>
+      </article>
+    </div>
 
-						<div class="stack-info">
-							<div class="sname">FastAPI</div>
-							<div class="stype">framework/python</div>
-							<div class="lvl">
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot"></div>
-								<div class="lvl-dot"></div>
-								<div class="lvl-dot"></div>
-							</div>
-						</div>
-					</div>
+    <!-- View more -->
+    <div class="mt-8 flex justify-center reveal delay-400">
+      <a href="https://github.com/parclan" target="_blank"
+         class="inline-flex items-center gap-2 section-label hover:text-[#e6edf3] transition-colors" data-en="View more on GitHub" data-es="Ver más en GitHub">
+        <i class="ph-duotone ph-github-logo" style="font-size:16px;"></i>
+        <span>View more on GitHub</span>
+        <i class="ph-duotone ph-arrow-right" style="font-size:13px;"></i>
+      </a>
+    </div>
 
-					<div class="stack-card fade-up">
-						<div class="stack-icon" style="background:rgba(249,115,22,0.1)">
-							<i class="ph-duotone ph-flame" style="color:#f97316;font-size:1.6rem"></i>
-						</div>
+  </section>
 
-						<div class="stack-info">
-							<div class="sname">CodeIgniter</div>
-							<div class="stype">framework/php</div>
-							<div class="lvl">
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot"></div>
-							</div>
-						</div>
-					</div>
+  <!-- ═══════════════ FINAL CTA BLOCK ════════════════ -->
+  <section class="max-w-4xl mx-auto px-6 pb-28">
+    <div class="cta-block reveal">
 
-					<div class="stack-card fade-up">
-						<div class="stack-icon" style="background:rgba(0,212,255,0.08)">
-							<i class="ph-duotone ph-database" style="color:var(--accent);font-size:1.6rem"></i>
-						</div>
+      <!-- Decorative mono label -->
+      <p class="section-label mb-6" data-en="/ let's connect" data-es="/ conectemos">/ let's connect</p>
 
-						<div class="stack-info">
-							<div class="sname">SQL</div>
-							<div class="stype">database</div>
-							<div class="lvl">
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot on"></div>
-							</div>
-						</div>
-					</div>
+      <!-- Title -->
+      <h2 class="cta-title mb-4" data-en="Have a project in mind?" data-es="¿Tienes un proyecto en mente?">
+        Have a project<br/>
+        <span style="color:#484f58;">in mind?</span>
+      </h2>
 
-					<div class="stack-card fade-up">
-						<div class="stack-icon" style="background:rgba(124,58,237,0.1)">
-							<i class="ph-duotone ph-git-branch" style="color:#7c3aed;font-size:1.6rem"></i></div>
-						<div class="stack-info">
-							<div class="sname">Git</div>
-							<div class="stype">version control</div>
-							<div class="lvl">
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot"></div>
-							</div>
-						</div>
-					</div>
+      <p style="color:#7d8590; font-size:0.95rem; max-width:420px; margin:0 auto 2.5rem; line-height:1.7;" data-en="I'm always open to discussing new projects, creative ideas, or opportunities to grow together." data-es="Siempre estoy abierto a discutir nuevos proyectos, ideas creativas u oportunidades para crecer juntos.">
+        I'm always open to discussing new projects, creative ideas, or opportunities to grow together.
+      </p>
 
-					<div class="stack-card fade-up">
-						<div class="stack-icon" style="background:rgba(16,185,129,0.1)">
-							<i class="ph-duotone ph-cloud" style="color:var(--accent3);font-size:1.6rem"></i>
-						</div>
+      <!-- Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-3">
+        <a href="mailto:molinajimenez495@gmail.com" class="btn-white" data-en="Send me an email" data-es="Envíame un email">
+          <i class="ph-duotone ph-envelope" style="font-size:16px;"></i>
+          <span>Send me an email</span>
+        </a>
+        <a href="https://www.linkedin.com/in/jose-daniel-molina-jimenez-834809247" target="_blank" class="btn-ghost">
+          <i class="ph-duotone ph-linkedin-logo" style="font-size:16px;"></i>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
 
-						<div class="stack-info">
-							<div class="sname">REST APIs</div>
-							<div class="stype">architecture</div>
-							<div class="lvl">
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot"></div>
-								<div class="lvl-dot"></div>
-							</div>
-						</div>
-					</div>
+  <!-- ═══════════════ FOOTER ════════════════ -->
+  <footer class="border-t border-[#21262d]">
+    <div class="max-w-4xl mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <span style="font-family:'Geist Mono',monospace; font-size:0.72rem; color:#484f58;">
+        © 2026 Parclan
+      </span>
+    </div>
+  </footer>
 
-					<div class="stack-card fade-up">
-						<div class="stack-icon" style="background:rgba(59,130,246,0.1)">
-							<i class="ph-duotone ph-cube" style="color:#3b82f6;font-size:1.6rem"></i>
-						</div>
-
-						<div class="stack-info">
-							<div class="sname">Docker</div>
-							<div class="stype">devops</div>
-							<div class="lvl">
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot on"></div>
-								<div class="lvl-dot"></div>
-								<div class="lvl-dot"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- PROYECTOS -->
-		<section id="projects">
-			<div class="section-inner">
-				<div class="section-header">
-				<div class="section-eyebrow fade-up"><i class="ph-duotone ph-squares-four"></i> Proyectos</div>
-				<h2 class="section-title fade-up">Trabajo destacado</h2>
-				<p class="section-sub fade-up">Proyectos que reflejan mi forma de pensar, construir y resolver problemas.</p>
-				</div>
-				<div class="projects-grid">
-					<div class="project-card fade-up">
-						<div class="project-top">
-							<div class="project-icon" style="background:rgba(0,212,255,0.1)"><i class="ph-duotone ph-chart-line-up" style="color:var(--accent)"></i></div>
-							<div class="project-links">
-								<a href="https://github.com/Parclan/Login-bancolombia-NO-OFICIAL-" class="project-link-btn"><i class="ph-duotone ph-github-logo"></i></a>
-								<a href="https://login-bancolombia-no-oficial.vercel.app/" class="project-link-btn"><i class="ph-duotone ph-arrow-square-out"></i></a>
-							</div>
-						</div>
-
-						<div class="project-body">
-							<h3>Login Bancolombia</h3>
-							<p>Login bancolombia recreado para fines educativos.</p>
-							<div class="tech-tags">
-								<span class="tech-tag">Phosphoricons</span>
-								<span class="tech-tag">React</span>
-								<span class="tech-tag">JavaScript</span>
-								<span class="tech-tag">Tailwinds</span>
-								<span class="tech-tag">Sileo</span>
-							</div>
-						</div>
-						
-					</div>
-
-					<div class="project-card fade-up">
-						<div class="project-top">
-							<div class="project-icon" style="background:rgba(0,212,255,0.1)"><i class="ph-duotone ph-scissors" style="color:var(--accent)"></i></div>
-							<div class="project-links">
-								<a href="https://github.com/Parclan/app-barberia" class="project-link-btn"><i class="ph-duotone ph-github-logo"></i></a>
-								<a href="https://app-barberia-five.vercel.app/" class="project-link-btn"><i class="ph-duotone ph-arrow-square-out"></i></a>
-							</div>
-						</div>
-
-						<div class="project-body">
-							<h3>App Barberia</h3>
-							<p>Aplicación para gestión de citas en una barbería.</p>
-							<div class="tech-tags">
-								<span class="tech-tag">Phosphoricons</span>
-								<span class="tech-tag">React</span>
-								<span class="tech-tag">JavaScript</span>
-								<span class="tech-tag">Tailwinds</span>
-								<span class="tech-tag">Sileo</span>
-								<span class="tech-tag">Node JS</span>
-								<span class="tech-tag">Api</span>
-								<span class="tech-tag">MariaDB</span>
-							</div>
-						</div>
-						
-					</div>
-
-					<div class="project-card fade-up">
-						<div class="project-top">
-							<div class="project-icon" style="background:rgba(0,212,255,0.1)"><i class="ph-duotone ph-music-notes" style="color:var(--accent)"></i></div>
-							<div class="project-links">
-								<a href="https://github.com/Parclan/applemusic-dev" class="project-link-btn"><i class="ph-duotone ph-github-logo"></i></a>
-								<a href="https://applemusic-dev.vercel.app/" class="project-link-btn"><i class="ph-duotone ph-arrow-square-out"></i></a>
-							</div>
-						</div>
-
-						<div class="project-body">
-							<h3>Apple Music</h3>
-							<p>Interfaz de usuario para una aplicación de música. (Para fines educativos)</p>
-							<div class="tech-tags">
-								<span class="tech-tag">React</span>
-								<span class="tech-tag">JavaScript</span>
-								<span class="tech-tag">Tailwinds</span>
-							</div>
-						</div>
-						
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- EXPERIENCIA -->
-		<section id="experience">
-			<div class="section-inner">
-
-				<div class="section-header">
-					<div class="section-eyebrow fade-up">
-						<i class="ph-duotone ph-briefcase"></i> Experiencia
-					</div>
-					<h2 class="section-title fade-up">Trayectoria</h2>
-					<p class="section-sub fade-up">Roles y empresas que han formado mi manera de desarrollar software.</p>
-				</div>
-
-				<div class="exp-grid">
-					<div class="exp-card fade-up">
-						<div class="exp-date">2024 — 2026</div>
-
-						<div>
-							<h3>Ingeniero Desarrollador Junior</h3>
-							<div class="exp-company"><i class="ph-duotone ph-buildings"></i> ASISTENCIA MÉDICA INMEDIATA S.A.S</div>
-							<p>Trabajé como programador de software en una empresa dedicada al sector salud. Allí desarrollé y mantuve sistemas que mejoraron procesos clínicos y administrativos, 
-								contribuyendo a su transformación digital.</p>
-						</div>
-					</div>
-					<div class="exp-card fade-up">
-						<div class="exp-date">2023 — 2024</div>
-
-						<div>
-							<h3>Desarrollador Backend y Soporte tecnico</h3>
-							<div class="exp-company"><i class="ph-duotone ph-buildings"></i> TECNIJURIDICA S.A.S</div>
-							<p>Contribuí a la empresa brindando soporte técnico integral a los equipos informáticos y desarrollando programas que optimizan las tareas operativas. Además, 
-								asumí el rol de soporte al cliente, asegurando una atención de calidad y resolviendo eficazmente sus necesidades.</p>
-						</div>
-					</div>
-				</div>
-
-				<br><br>
-
-				<div class="section-header">
-					<div class="section-eyebrow fade-up">
-						<i class="ph-duotone ph-student"></i> Educación
-					</div>
-				</div>
-
-				<div class="exp-grid">
-					<div class="exp-card fade-up">
-						<div class="exp-date">2025 — Actualmente</div>
-
-						<div>
-							<h3>Ingeniero de sistemas</h3>
-							<div class="exp-company">
-								<i class="ph-duotone ph-graduation-cap"></i> UNIMINUTO
-							</div>
-						</div>
-					</div>
-
-					<div class="exp-card fade-up">
-						<div class="exp-date">2022 — 2025</div>
-
-						<div>
-							<h3>Tecnólogo en Desarrollo de Software</h3>
-						
-							<div class="exp-company">
-								<i class="ph-duotone ph-graduation-cap"></i> SENA
-							</div>
-						</div>
-					</div>
-
-					<div class="exp-card fade-up">
-						<div class="exp-date">2020 — 2021</div>
-
-						<div>
-							<h3>Técnico en Programación de Software</h3>
-						
-							<div class="exp-company">
-								<i class="ph-duotone ph-graduation-cap"></i> SENA
-							</div>
-						</div>
-					</div>
-
-					<div class="exp-card fade-up">
-						<div class="exp-date">2015 — 2021</div>
-
-						<div>
-							<h3>Escuela Técnica</h3>
-						
-							<div class="exp-company">
-								<i class="ph-duotone ph-student"></i> Institución Educativa Técnico Francisco de Paula Santander
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</section>
-
-		<!-- SOBRE MÍ -->
-		<section id="about">
-			<div class="section-inner">
-				<div class="about-grid">
-					<div>
-						<div class="section-eyebrow fade-up">
-							<i class="ph-duotone ph-user-circle"></i> Sobre mí
-						</div>
-						<div class="about-stats">
-							<div class="about-stat fade-up">
-								<div class="num">3</div>
-								<div class="lbl">Años de experiencia</div>
-							</div>
-							<div class="about-stat fade-up">
-								<div class="num">8</div>
-								<div class="lbl">Tecnologías dominadas</div>
-							</div>
-							<div class="about-stat fade-up">
-								<div class="num">∞</div>
-								<div class="lbl">Ganas de aprender</div>
-							</div>
-						</div>
-					</div>
-					<div class="about-text fade-up">
-						<p>Soy un desarrollador de software apasionado por construir soluciones que realmente importan. Me especializo en el desarrollo full stack, conectando backends robustos con interfaces limpias e intuitivas.</p>
-						<p>Trabajo con Python y FastAPI para APIs de alto rendimiento, con Laravel y CodeIgniter para proyectos PHP, y con React + TypeScript en el frontend. SQL es mi herramienta para modelar y consultar datos de manera eficiente.</p>
-						<p>Me gusta el código limpio, la arquitectura bien pensada y los equipos donde se aprende todos los días. Siempre estoy buscando el próximo reto que me haga crecer.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- CONTACTO -->
-		<section id="contact">
-			<div class="section-inner">
-				<div class="contact-wrap">
-					<div class="section-eyebrow fade-up">
-						<i class="ph-duotone ph-chat-dots"></i> Contacto
-					</div>
-					<br>
-					<div class="contact-links fade-up">
-						<a href="mailto:molinajimenez495@gmail.com" class="contact-btn primary"><i class="ph-duotone ph-envelope"></i> Enviar email</a>
-						<a href="https://www.linkedin.com/in/jose-daniel-molina-jim%C3%A9nez-834809247/" class="contact-btn ghost"><i class="ph-duotone ph-linkedin-logo"></i> LinkedIn</a>
-						<a href="https://github.com/Parclan" class="contact-btn ghost"><i class="ph-duotone ph-github-logo"></i> GitHub</a>
-					</div>
-					
-					<div class="contact-row fade-up">
-						<div class="contact-item"><i class="ph-duotone ph-envelope"></i><span>molinajimenez495@gmail.com</span></div>
-						<div class="contact-item"><i class="ph-duotone ph-map-pin"></i><span>Barranquilla, Colombia</span></div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<footer>
-			<p>Construido por <span>Jose Molina</span> · 2026 · con <span>❤</span> y mucho café ☕</p>
-		</footer>
-
-	</body>
-</html>
+</body>
+</html>	
