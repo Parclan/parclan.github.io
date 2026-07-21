@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Bancolombia login recreated for educational purposes.': 'Login bancolombia recreado para fines educativos.',
         'User interface for a music streaming application. (For educational purposes)': 'Interfaz de usuario para una aplicación de música. (Para fines educativos)',
         'Travel website featuring information on destinations and vacation packages.': 'Pagina web de viajes, con información de destinos y paquetes turísticos.',
+        'Situs web GeDT': 'Pagina web de GeDT',
         }
     };
 
